@@ -3,12 +3,18 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   View,
+  requireNativeComponent,
+  Dimensions
 } from 'react-native';
+
+var XZScanLoginView = requireNativeComponent('XZScanLogin',null)
+
 
 class XZScanLoginScene extends Component {
   render() {
     return (
-      <View style = {{flex:1,backgroundColor:'red'}}/>
+      
+      <XZScanLoginView style = {{width:Dimensions.get('window').width,height:Dimensions.get('window').height,backgroundColor:'blue',marginTop:64}}/>
     );
   }
 }
